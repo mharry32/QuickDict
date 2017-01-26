@@ -1,0 +1,19 @@
+﻿<toast launch="app-defined-string">
+  <visual>
+    <binding template="ToastGeneric">
+      <text>输入要查询的单词</text>
+    </binding>
+  </visual>
+  <actions>
+    <input id="message" type="text" placeHolderContent="在此处输入" />
+    <input id="p1" type="selection" defaultInput="有道翻译">
+      <selection id="有道翻译" content="有道翻译" />
+    </input>
+    
+
+    <action activationType="background" content="确定" arguments="ENTER"/>
+
+  </actions>
+<audio src="ms-appx:///Assets/silent.mp3" silent="true"/> 
+</toast>
+

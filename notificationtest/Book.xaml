@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="notificationtest.Book"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:notificationtest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" RequestedTheme="Dark">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            
+            <AppBarButton x:Name="check" Label="查看" Icon="View" IsCompact="False" Click="check_Click"/>
+            <AppBarButton x:Name="delete" Label="删除" Icon="Delete" IsCompact="False" Click="delete_Click"/>
+            <AppBarButton x:Name="back" Label="返回" Icon="Back" IsCompact="False" Click="back_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalScrollMode="Enabled" VerticalAlignment="Stretch">
+            <ListView x:Name="voclist"/>
+        </ScrollViewer>
+    </Grid>
+</Page>

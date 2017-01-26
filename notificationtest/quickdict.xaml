@@ -1,0 +1,33 @@
+﻿<ContentDialog
+    x:Class="notificationtest.quickdict"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:notificationtest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="QD    欢迎使用QuickDict！"
+    Background="LightBlue"
+    Foreground="White"
+    PrimaryButtonText="确定"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonText="跪求好评"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+        <TextBlock Foreground="Black" VerticalAlignment="Top" Text="感谢您的支持。如需帮助，请填写反馈." TextWrapping="Wrap"/>
+            <TextBox x:Name="reviewbox" PlaceholderText="在这里写下您的反馈"/>
+            <StackPanel Orientation="Horizontal">
+            <Button x:Name="sendmail" Content="发送反馈" Click="emailme_Click"/>
+                <ProgressRing x:Name="pgring" IsActive="False"/>
+            </StackPanel>
+        </StackPanel>
+       
+    </Grid>
+</ContentDialog>

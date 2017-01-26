@@ -1,0 +1,13 @@
+﻿<toast launch="(voc)">
+  <visual>
+    <binding template="ToastGeneric">
+      <text></text>
+    </binding>
+  </visual>
+  <actions>
+    <input id="tp" defaultInput="" type="text" placeHolderContent="" />
+    <action activationType="background" content="确定" arguments="voc"/>
+        
+  </actions>
+<audio src="ms-appx:///Assets/silent.mp3" silent="true"/>
+</toast>

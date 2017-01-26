@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="notificationtest.help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:notificationtest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" RequestedTheme="Dark">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Back" IsCompact="False" Label="返回" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+    <ScrollViewer>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+            <RichTextBlock HorizontalAlignment="Stretch">
+                <Paragraph TextAlignment="Center">
+                    词库转换教程
+                </Paragraph>
+                <Paragraph>
+                    1.首先下载两个工具
+                </Paragraph>
+                <Paragraph>
+                    GetDict
+                    <Hyperlink NavigateUri="http://pan.baidu.com/s/1cr6SxS">http://pan.baidu.com/s/1cr6SxS</Hyperlink>
+                </Paragraph>
+                <Paragraph>
+                    MdxBuilder
+                    <Hyperlink NavigateUri="http://pan.baidu.com/s/1ge2BJVH">
+                        http://pan.baidu.com/s/1ge2BJVH
+                    </Hyperlink>
+                </Paragraph>
+                <Paragraph>
+
+                </Paragraph>
+                <Paragraph>
+                    2.打开GetDict，按以下图示操作好后(注意那四个选项框一定要取消选中),点击开始转化,并记下词典文件的编码(UTF-16,UTF-8或GBK)
+                    <InlineUIContainer>
+                        <Image Source="Assets/cap.JPG"/>
+                    </InlineUIContainer>
+                </Paragraph>
+                <Paragraph>
+                    <LineBreak></LineBreak>
+                    3.这时在GetDict同一目录下会多出一个或者两个txt，如果有一个，说明原来的mdx为Html格式，如果有两个，则是Compact Html格式
+                    <LineBreak></LineBreak>
+                    <LineBreak></LineBreak>
+                    4.打开MdxBuilder,source那项选择刚才生成的文件名后缀不带style的那个txt，Target项填“xx.mdx”(xx可换成任意名称),style项选择刚才生成的文件名后缀带style的txt(没有的话可以忽略),original format项选择原来那个mdx文件的格式，编码选择原来那个mdx文件的编码,所有选项框都必须为不选中状态，然后点击start，开始转化
+                    <LineBreak></LineBreak>
+                    <LineBreak></LineBreak>
+                    5.在和MdxBuider同一目录下找到转换后的mdx文件，重新尝试导入
+                    
+                </Paragraph>
+                <Paragraph>
+                    懒得找词库资源？点击下面链接，下载由作者精选出来的各种词库！
+                    <Hyperlink NavigateUri="http://pan.baidu.com/s/1gfi9z27">
+                        http://pan.baidu.com/s/1gfi9z27
+                    </Hyperlink>
+                </Paragraph>
+
+            </RichTextBlock>
+            
+        </Grid>
+    </ScrollViewer>
+</Page>

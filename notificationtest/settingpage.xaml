@@ -1,0 +1,51 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:notificationtest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Universal="using:Microsoft.AdMediator.Universal"
+    x:Class="notificationtest.settingpage"
+    mc:Ignorable="d" RequestedTheme="Dark">
+
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="True">
+            <AppBarButton x:Name="save" Label="保存" Icon="Save" Click="save_Click"/>
+            <AppBarButton x:Name="Back" Label="取消" Icon="Cancel" Click="Back_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+
+
+    <Grid Background="#99000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1.5*"/>
+
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button Content="QD" Background="Black" Foreground="White" Click="Button_Click" Margin="0,0,5,0"/>
+            <TextBlock Text="通知栏快速查词设置" HorizontalAlignment="Left" FontSize="20"/>
+        </StackPanel>
+        
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                <TextBlock Text="以下词典将会显示在通知栏中" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                <ListBox x:Name="flist" MinHeight="200" HorizontalAlignment="Center" Margin="10,5,10,0"/>
+                <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Margin="0">
+                    <ComboBox x:Name="flistcb" PlaceholderText="选择..." Margin="0,5,5,0"/>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button x:Name="flistbt" Click="flistbt_Click" Content="+" Margin="5,5,0,0"/>
+                    <Button x:Name="flistrm" Content="-" Click="flistrm_Click" Margin="5,5,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            </StackPanel>
+
+            
+       
+        <Universal:AdMediatorControl HorizontalAlignment="Center" Name="ad" Id="1995072132" Height="50"  Grid.Row="2" VerticalAlignment="Top" Width="300" Margin="0,30,0,0"/>
+    </Grid>
+
+
+
+</Page>
